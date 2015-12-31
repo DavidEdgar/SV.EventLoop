@@ -9,8 +9,11 @@ namespace SV.EventLoop
 {
     /// <summary>
     /// The looping mechanism that's asking "Are we there yet" every few seconds.
+    /// 
+    /// Abstracted from a mechanic that claimed records in a data store for an application, 
+    /// retrieved the claimed records, and then processed them
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">The type that getters will get and processors will process</typeparam>
     public class ClaimGetSleep<T> : IEventLoop<T>
     {
         private readonly Action _claimer;

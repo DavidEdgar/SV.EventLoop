@@ -7,6 +7,10 @@ using Burrow;
 
 namespace SV.EventLoop
 {
+    /// <summary>
+    /// Listens to a RabbitMQ queue for 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class RabbitQueue<T> : IEventLoop<T>
     {
         private readonly RabbitTunnel _tunnel;
